@@ -1,0 +1,10 @@
+Beohvision Portfolio v2.0 — Guest Photographer
+
+修正：
+- 本次新增的 21 張作品不再放在「人物・婚禮」。
+- 新增完全獨立欄位「特邀攝影師｜GUEST PHOTOGRAPHER」。
+- 此欄位內全部都是本次上傳、屬於同一位其他攝影師的作品。
+- 不與 Beohvision / Flickr 作品混合。
+- 原本五個 Beohvision 分類內容維持原樣。
+
+將整包內容覆蓋 GitHub repo main 根目錄即可。
