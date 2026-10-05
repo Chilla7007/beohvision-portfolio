@@ -29,12 +29,80 @@ body{-webkit-text-size-adjust:100%;touch-action:manipulation}.no-scroll{overflow
 
 .bio{display:block;margin:-18px 0 34px;max-width:900px;color:#666;font-size:14px;line-height:1.9}.bio span{display:inline;padding:0;border:0;background:none}.bio span:not(:last-child)::after{content:" ／ ";color:#aaa}
 @media(max-width:720px){header{justify-content:center;padding-left:16px;padding-right:16px;overflow:visible;border-bottom:0}header img{display:block;width:118px;max-height:58px;object-fit:contain;object-position:center;margin:0 auto}.bio{margin:-10px 0 24px;font-size:13px;line-height:1.85}.bio span{font-size:inherit;padding:0}}
-.welcome h1{max-width:1000px}
-@media(max-width:720px){.welcome{padding-top:46px}.welcome h1{font-size:34px;line-height:1.18}.intro{font-size:15px}}
+.photographer-links{display:flex;gap:10px;flex-wrap:wrap;margin:-12px 0 32px}.social-btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border:1px solid #222;color:#111;text-decoration:none;font-size:14px;background:#fff}.social-btn:hover{background:#111;color:#fff}.welcome h1{max-width:1000px}
+@media(max-width:720px){.photographer-links{margin:-4px 0 24px;gap:8px}.social-btn{flex:1 1 auto;justify-content:center;min-height:48px}.welcome{padding-top:46px}.welcome h1{font-size:34px;line-height:1.18}.intro{font-size:15px}}
 
-/* Secondary profile actions: deliberately quieter than portfolio category tabs */
-.photographer-links{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:-10px 0 34px;padding:0 0 18px;border-bottom:1px solid #e6e6e6}
-.profile-link{display:inline-flex;align-items:center;gap:7px;color:#555;text-decoration:none;font-size:13px;letter-spacing:.02em;padding:5px 0;border:0;background:transparent}
-.profile-link::before{content:"";display:block;width:5px;height:5px;border-radius:50%;background:#999}
-.profile-link:hover{color:#111}.profile-link:hover::before{background:#111}.profile-link-video span{color:#999;font-size:11px}
-@media(max-width:720px){.photographer-links{gap:18px;margin:-2px 0 22px;padding-bottom:14px;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}.profile-link{flex:0 0 auto;min-height:34px;font-size:12px}.profile-link-video span{font-size:10px}}
+/* 2026-10-05 refined hierarchy + profile update */
+.hero-title{font-family:Georgia,"Noto Serif TC",serif;font-weight:400;line-height:1.02;margin:18px 0 22px;display:flex;flex-direction:column;align-items:flex-start;gap:2px;font-size:clamp(38px,5.2vw,68px)}.hero-title span{white-space:nowrap}.hero-title .hero-en{font-family:Arial,"Noto Sans TC",sans-serif;font-size:.72em;letter-spacing:.06em;font-weight:500}.choices{align-items:stretch}.choice{position:relative;display:grid;grid-template-columns:132px 1fr;grid-template-areas:"photo label" "photo title" "photo desc" "photo link";column-gap:28px;align-content:center}.profile-photo{grid-area:photo;width:132px;height:132px;overflow:hidden;background:#ddd;align-self:center}.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}.choice .label{grid-area:label;margin:0 0 10px}.choice h2{grid-area:title}.choice p{grid-area:desc;margin-bottom:24px}.choice strong{grid-area:link}.photographer-links{display:flex;gap:18px;flex-wrap:wrap;margin:-12px 0 28px;padding-bottom:18px;border-bottom:1px solid #e7e7e7}.info-link{font-size:13px;color:#666;text-decoration:none;letter-spacing:.02em}.info-link:hover{color:#111}.contact h2{font-family:Arial,"Noto Sans TC",sans-serif;font-size:20px;font-weight:500;letter-spacing:.035em}.loading-note{color:#777;font-size:14px;padding:24px 0}
+@media(max-width:720px){.hero-title{font-size:36px;line-height:1.04;gap:3px;margin-top:6px}.hero-title .hero-en{font-size:.72em}.choice{grid-template-columns:86px 1fr;grid-template-areas:"photo label" "photo title" "desc desc" "link link";column-gap:18px;min-height:0}.profile-photo{width:86px;height:86px;align-self:start}.choice .label{align-self:end;margin-bottom:5px}.choice h2{align-self:start;font-size:25px;margin-bottom:18px}.choice p{grid-area:desc;margin:4px 0 20px}.choice strong{grid-area:link}.photographer-links{gap:14px;margin:-4px 0 20px;padding-bottom:14px}.info-link{font-size:12px}#tabs{position:sticky;top:70px;z-index:18;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding-top:8px;padding-bottom:8px;margin-bottom:14px;border-bottom:1px solid #eee}#tabs button{border:0;background:transparent;padding:9px 4px;margin-right:14px;min-height:38px;color:#777}#tabs button.active{background:transparent;color:#111;border-bottom:2px solid #111;font-weight:600}.contact h2{font-size:18px}.welcome{padding-top:34px}}
+
+/* 2026-10-05 wide photographer cards + centered portfolio logo + all sans-serif */
+html,body,button,input,textarea,select,a{font-family:Arial,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif!important}
+.welcome h1,.hero-title,.choice h2,#title h1{font-family:Arial,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif!important}
+
+/* Desktop homepage photographer card: portrait 1/3, copy 2/3, full card height */
+.choice{padding:0;grid-template-columns:minmax(0,1fr) minmax(0,2fr);grid-template-rows:auto auto auto auto;grid-template-areas:"photo label" "photo title" "photo desc" "photo link";column-gap:0;align-content:stretch;overflow:hidden;min-height:330px}
+.profile-photo{grid-area:photo;width:100%;height:100%;min-height:330px;align-self:stretch;overflow:hidden;background:#ddd}
+.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.choice .label,.choice h2,.choice p,.choice strong{margin-left:34px;margin-right:34px}
+.choice .label{align-self:end;margin-top:38px;margin-bottom:10px}
+.choice h2{align-self:start;margin-top:0}
+.choice p{margin-bottom:22px}
+.choice strong{margin-bottom:38px;align-self:start}
+
+/* Portfolio page logo centered */
+body.portfolio-open header{justify-content:center;padding-left:5vw;padding-right:5vw}
+body.portfolio-open header img{margin-left:auto;margin-right:auto}
+
+@media(max-width:720px){
+  .choice{grid-template-columns:minmax(0,1fr) minmax(0,2fr);grid-template-rows:auto auto 1fr auto;grid-template-areas:"photo label" "photo title" "photo desc" "photo link";min-height:270px;padding:0;column-gap:0}
+  .profile-photo{width:100%;height:100%;min-height:270px;align-self:stretch}
+  .choice .label,.choice h2,.choice p,.choice strong{margin-left:18px;margin-right:18px}
+  .choice .label{margin-top:24px;margin-bottom:6px;align-self:end}
+  .choice h2{font-size:24px;margin-bottom:10px}
+  .choice p{grid-area:desc;margin-top:0;margin-bottom:12px;font-size:14px;line-height:1.55}
+  .choice strong{grid-area:link;margin-bottom:24px}
+}
+
+/* 2026-10-05 editorial refinement: elegant / minimal / modern */
+:root{--ink:#171717;--muted:#737373;--hair:#dedede;--paper:#fff}
+html,body,button,input,textarea,select,a{font-family:"Helvetica Neue","Avenir Next","Noto Sans TC","PingFang TC",Arial,sans-serif!important;font-weight:400}
+body{color:var(--ink);letter-spacing:.005em}
+.hero-title{font-family:"Helvetica Neue","Avenir Next","Noto Sans TC","PingFang TC",Arial,sans-serif!important;font-weight:300;letter-spacing:-.025em;line-height:1.03}
+.hero-title .hero-en{font-family:inherit!important;font-weight:300;letter-spacing:.13em}
+.intro{font-weight:300;letter-spacing:.02em;color:#555}
+.choice{border-width:1px}
+.choice .label{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;opacity:.72}
+.choice h2{font-family:inherit!important;font-weight:400;letter-spacing:.015em;line-height:1.15}
+.choice p{font-weight:300;line-height:1.8;letter-spacing:.025em}
+.choice strong{font-size:12px;font-weight:500;letter-spacing:.08em}
+.profile-photo img{transform:scale(1.2);transform-origin:center center}
+.photographer-name-en{display:block;margin-top:7px;font-size:12px;font-weight:400;letter-spacing:.22em;color:#8a8a8a;text-transform:uppercase}
+#title h1{font-family:inherit!important;font-weight:400;letter-spacing:.01em}
+#title>p{font-weight:300;letter-spacing:.035em;color:#555}
+.bio{font-weight:300;color:#6f6f6f;line-height:1.85}
+.info-link{font-weight:400;letter-spacing:.08em}
+#tabs button{font-family:inherit!important;font-weight:400;letter-spacing:.035em}
+#tabs button.active{font-weight:500}
+.contact h2{font-family:inherit!important;font-weight:400;letter-spacing:.11em}
+@media(max-width:720px){
+ .hero-title{font-weight:300;letter-spacing:-.02em}
+ .choice .label{font-size:10px;letter-spacing:.15em}
+ .choice h2{font-weight:400;line-height:1.2}
+ .choice p{font-weight:300;line-height:1.65}
+ .photographer-name-en{font-size:10px;margin-top:5px;letter-spacing:.2em}
+}
+
+/* 2026-10-05 individual homepage portrait framing */
+#profile-haoyu{transform:scale(1.2);transform-origin:center center}
+#profile-zhu{transform:scale(1.32);transform-origin:center center}
+
+/* 2026-10-05 homepage: wider portraits + centered unclipped black logo */
+header{justify-content:center!important;padding-left:5vw!important;padding-right:5vw!important;overflow:visible!important}
+header img{display:block!important;width:138px!important;height:64px!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important}
+.choice{grid-template-columns:minmax(0,1.1fr) minmax(0,1.9fr)!important}
+@media(max-width:720px){
+  header{justify-content:center!important;padding-left:16px!important;padding-right:16px!important;overflow:visible!important}
+  header img{width:112px!important;height:54px!important;max-height:none!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important}
+  .choice{grid-template-columns:minmax(0,1.1fr) minmax(0,1.9fr)!important}
+}
