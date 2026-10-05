@@ -115,3 +115,30 @@ header img{display:block!important;width:138px!important;height:64px!important;o
     object-position:50% 32%!important;
   }
 }
+
+
+/* 2026-10-05 paper texture + portfolio discovery + logo intro */
+body{
+  background-color:#f8f5ee;
+  background-image:
+    radial-gradient(circle at 20% 30%,rgba(70,55,35,.025) 0 .55px,transparent .7px),
+    radial-gradient(circle at 75% 65%,rgba(70,55,35,.018) 0 .5px,transparent .65px),
+    repeating-linear-gradient(0deg,rgba(90,75,55,.012) 0 1px,transparent 1px 4px);
+  background-size:9px 9px,13px 13px,100% 4px;
+}
+header,#tabs{background-color:rgba(248,245,238,.96)!important}
+.choice:not(.dark){background:rgba(250,248,243,.84)}
+#logo-intro{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;background:#f8f5ee;pointer-events:none;animation:introFade 1.65s ease forwards}
+#logo-intro img{width:min(42vw,310px);height:auto;object-fit:contain;filter:blur(13px);opacity:0;transform:scale(.72);animation:logoReveal 1.35s cubic-bezier(.2,.75,.2,1) forwards}
+@keyframes logoReveal{0%{filter:blur(13px);opacity:0;transform:scale(.72)}35%{opacity:.68}100%{filter:blur(0);opacity:1;transform:scale(1)}}
+@keyframes introFade{0%,78%{opacity:1}100%{opacity:0;visibility:hidden}}
+.portfolio-tools{display:flex;justify-content:flex-end;margin:-5px 0 12px}
+#shuffle{border:0;background:transparent;color:#555;padding:8px 0 8px 16px;font-size:12px;letter-spacing:.08em;cursor:pointer;border-bottom:1px solid #aaa}
+#shuffle:hover{color:#111;border-color:#111}
+@media(max-width:720px){
+ body{background-size:8px 8px,12px 12px,100% 4px}
+ #logo-intro img{width:min(58vw,230px)}
+ .portfolio-tools{justify-content:flex-start;margin:0 0 6px}
+ #shuffle{font-size:12px;padding:9px 0;margin:0;min-height:40px}
+}
+@media(prefers-reduced-motion:reduce){#logo-intro{display:none}}
