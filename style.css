@@ -106,3 +106,12 @@ header img{display:block!important;width:138px!important;height:64px!important;o
   header img{width:112px!important;height:54px!important;max-height:none!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important}
   .choice{grid-template-columns:minmax(0,1.1fr) minmax(0,1.9fr)!important}
 }
+
+/* 2026-10-05 mobile safety framing for Chute: keep face fully visible */
+@media(max-width:720px){
+  #profile-zhu{
+    transform:scale(1.08)!important;
+    transform-origin:50% 38%!important;
+    object-position:50% 32%!important;
+  }
+}
