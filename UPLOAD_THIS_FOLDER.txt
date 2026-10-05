@@ -1,0 +1,9 @@
+Beohvision 發佈版 2026-10-05
+
+請把「這個資料夾裡面的全部內容」上傳到 GitHub repo 根目錄並覆蓋舊檔。
+不要只上傳 ZIP。
+
+已確認：
+- assets/hao-new/ 內含莊浩宇自行上傳的 20 張舞台／活動照片
+- team-data.js 的「莊浩宇 > 舞台演出」已引用這 20 張照片
+- 加入版本參數，降低手機 Safari/GitHub Pages 讀到舊快取的機率
