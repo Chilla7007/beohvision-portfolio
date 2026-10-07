@@ -168,3 +168,37 @@ header{position:relative}.logo-button{border:0;background:transparent;padding:0;
 .about-work-gallery .photo{break-inside:avoid;margin:0 0 12px;cursor:zoom-in}.about-work-gallery .photo img{width:100%;height:auto;display:block}
 @media(max-width:1100px){.about-work-gallery{columns:2}}
 @media(max-width:720px){.about-lead-core{font-size:16px!important;line-height:1.85!important}.about-work-jump{margin-top:22px!important;gap:9px!important}.about-work-jump>small{font-size:9px!important}.about-work-gallery{columns:1;column-gap:0}.about-work-gallery .photo{margin-bottom:10px}#about-work{scroll-margin-top:76px!important}}
+
+/* 2026-10-07 mobile typography + refined hero + vector arrows */
+.hero-title{gap:0!important;line-height:1.08!important}
+.hero-title .hero-en{font-size:.42em!important;letter-spacing:.22em!important;margin:7px 0 9px!important;color:#777!important;font-weight:400!important}
+.home-about .about-cta{display:inline-flex;align-items:center;gap:14px;text-align:left}
+.home-about .about-cta span{display:inline-flex;align-items:center;gap:8px;margin:0!important}
+.home-about .about-cta span::after{content:"";width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:translateY(2px)}
+.home-about .about-cta span::before{content:"";order:2;width:9px;height:1px;background:currentColor;transform:translate(-11px,2px) rotate(-45deg);transform-origin:right center}
+@media(max-width:720px){
+ html,body,button,input,textarea,select,a{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Noto Sans TC",Arial,sans-serif!important}
+ .hero-title{font-size:35px!important;line-height:1.08!important;letter-spacing:.01em!important;gap:0!important;margin:10px 0 24px!important}
+ .hero-title .hero-en{font-size:13px!important;line-height:1!important;letter-spacing:.24em!important;margin:10px 0 11px!important;color:#777!important;font-weight:400!important}
+ .home-about .about-cta{display:inline-flex!important;align-items:flex-start!important;gap:0!important;flex-direction:column!important}
+ .home-about .about-cta span{display:inline-flex!important;margin-top:7px!important;font-size:10px!important;letter-spacing:.16em!important;color:#777!important}
+}
+\n/* 2026-10-07 final homepage title + consistent vector arrow */
+.home-about .about-cta span::before,.home-about .about-cta span::after{content:none!important;display:none!important}
+.link-arrow{width:11px;height:11px;display:inline-block;flex:0 0 11px;overflow:visible;vertical-align:middle;margin-left:2px}
+.link-arrow path{fill:none;stroke:currentColor;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.hero-title{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:0!important}
+.hero-title .hero-en{font-size:.42em!important;letter-spacing:.22em!important;margin:8px 0 0!important;color:#777!important;font-weight:400!important}
+@media(max-width:720px){
+ .hero-title{font-size:35px!important;line-height:1.04!important;margin:10px 0 26px!important}
+ .hero-title .hero-en{font-size:13px!important;line-height:1!important;letter-spacing:.24em!important;margin:10px 0 0!important}
+ .home-about .about-cta span{align-items:center!important}
+ .link-arrow{width:10px;height:10px;flex-basis:10px}
+}
+
+/* 2026-10-07 contextual top navigation */
+.site-nav #site-nav-action{display:flex;flex-direction:column;align-items:flex-end;gap:3px;line-height:1.15}
+.site-nav .nav-zh{font-size:12px;letter-spacing:.12em}
+.site-nav .nav-en{font-size:8px;letter-spacing:.16em;color:#888;font-weight:400}
+body.about-open .text-back{display:none!important}
+@media(max-width:720px){.site-nav #site-nav-action{gap:4px}.site-nav .nav-zh{font-size:11px;letter-spacing:.08em}.site-nav .nav-en{font-size:7px;letter-spacing:.12em}}
